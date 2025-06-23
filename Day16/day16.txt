@@ -1,0 +1,76 @@
+ === 1. Arrow Functions =====
+ Concise syntax for functions.
+ Arrow functions inherit 'this' from surrounding context.
+
+  const add = (a, b) => a + b;
+  console.log("Arrow function add:", add(2, 3));
+  const multiply = (a,b) => a*b;
+  conArrow function multiply:", multiply(5,6);
+
+  ===== 2. Object Destructuring =====
+  Extract properties from objects into variables.
+
+  const user = { name: "Alice", age: 25, city: "Wonderland" };
+  const { name, age } = user;
+  console.log("Destructured name:", name);
+  console.log("Destructured age:", age);
+
+  const employee = { id: 21, age:50,name:"kumar"}
+  const{age,id} = employee;
+  console.log("Destructured id :",id);
+  console.log("Destrutured age :",age);
+
+  ===== 3. Array Methods: map and filter =====
+  map transforms arrays; filter selects elements based on condition.
+
+  const numbers = [1, 2, 3, 4, 5];
+  const doubled = numbers.map(num => num * 2);
+  console.log( "Doubled numbers:", doubled);
+
+  const evens = numbers.filter(num => num % 2 === 0);
+  console.log("Even numbers:", evens);
+
+  ===== 4. Spread Operator =====
+  Expands iterable elements or object properties into a new array/object.
+
+  const arr1 = [1, 2, 3];
+  const arr2 = [4, 5];
+
+  const concatedArr = arr1.concat(1);
+  console.log("Concatenated array:", concatedArr);
+
+  const spreadArr = [...arr1, 4, 5];
+  console.log("Spread array:", spreadArr);
+  const combinedArr = [...arr1, ...arr2];
+  console.log("Combined array:", combinedArr);
+
+  const obj1 = { a: 1, b: 2 };
+  const obj2 = { b: 3, c: 4 };
+  const combinedObj = { ...obj1, ...obj2 }; // Note: obj2 properties overwrite obj1's
+  console.log("Combined object:", combinedObj);
+
+ const obj1 = {a:24 , b:20};
+ const obj2 = {c:15 , d:50};
+ const combinedobj = {....obj1, ...obj2};
+ console.log("combined object:",combinedobj);
+
+  ===== 5. Ternary Operator =====
+  A concise if-else expression.
+
+const age = 15;
+const ageCheck = age >= 58 ? "Senior" : age >= 18 ? "Adult" : "Minor";
+console.log("Age check with ternary:", ageCheck);
+
+ const age = 21;
+ const major = age>=18 ? "Major" : age <=10 ? "child" : "baby";
+ console.log ("check with ternary: ",major);
+
+
+ ===== 6. Template Literals =====
+ String interpolation and multiline strings using backticks ``.
+
+ const bird = "crow";
+ const animal = undefined;
+
+ const apiUrl = `https://api.example.com/search?animal=${bird ?? bird}`;
+ console.log("Template literal URL:", apiUrl);

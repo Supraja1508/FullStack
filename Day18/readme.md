@@ -1,0 +1,1 @@
+This Node.js project practices API GET/POST calls using axios with CommonJS and ES Modules, formatting output via chalk and saving results to output.txt. It includes scripts like fetchpost.js, fetchusers.cjs, scoped.js, and utils.cjs to explore JavaScript scopes, functions, and modules. Perfect for hands-on learning of API interaction and core JS concepts.

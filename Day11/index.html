@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX with XML Example</title>
+</head>
+<body>
+
+<h2>Student List</h2>
+<button onclick="loadXML()">Load Students</button>
+<div id="studentList"></div>
+
+<script>
+function loadXML() {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "user.xml", true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      const xmlDoc = xhr.responseXML;
+      const students = xmlDoc.getElementsByTagName("user");
+      let output = "<ul>";
+
+      for (let i = 0; i < students.length; i++) {
+        const name = students[i].getElementsByTagName("name")[0].textContent;
+        const age = students[i].getElementsByTagName("age")[0].textContent;
+        output += `<li>${name} (Age: ${age})</li>`;
+      }
+
+      output += "</ul>";
+      document.getElementById("studentList").innerHTML = output;
+    }
+  };
+  xhr.send();
+}
+</script>
+
+</body>
+</html>

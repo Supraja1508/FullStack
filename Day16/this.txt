@@ -1,0 +1,33 @@
+Explanation for `this`
+
+In JavaScript, arrow functions do not possess their own `this`. 
+Instead, they capture `this` from their surrounding context—that is, from the scope in which they are created.
+       So yes, `this` can be accessed inside an arrow function, but it operates differently than in standard functions.
+
+
+
+MAIN DIFFERENCE:
+      Regular function: 
+      Think of this like a guest—who they are depends on who invited them and how. 
+      So, this changes depending on how the function is called.
+
+      Arrow function: Here, this is more like a shadow—it sticks with wherever the function was written. 
+      It doesn’t change based on how or where it’s used later.
+
+
+Example :
+        
+const profile = {
+  username: "Supraja",
+  introduce: function () {
+    setTimeout(() => {
+      console.log(`Hi, I'm ${this.username}`);
+    }, 1000);
+  }
+};
+
+profile.introduce();
+
+OUTPUT:
+       Hi, I'm Supraja
+( The arrow function inside setTimeout inherits this from the introduce method, which is tied to the profile object.)

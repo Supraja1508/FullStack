@@ -1,0 +1,1 @@
+Arrow functions in JavaScript don’t have their own `this`; They inherit it from the surrounding scope. This makes them useful when you want to preserve the context of `this`, especially inside callbacks or asynchronous code.

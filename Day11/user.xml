@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user>
+    <firstName>Stanleyraj</firstName>
+    <lastName>Kumar</lastName>
+    <city>Coimbatore</city>
+    <state>Tamil Nadu</state>
+  </user>
+  <user>
+    <firstName>Sneha</firstName>
+    <lastName>Nair</lastName>
+    <city>Chennai</city>
+    <state>Tamil Nadu</state>
+  </user>
+  <user>
+    <firstName>Arun</firstName>
+    <lastName>Sharma</lastName>
+    <city>Bangalore</city>
+    <state>Karnataka</state>
+  </user>
+</users>

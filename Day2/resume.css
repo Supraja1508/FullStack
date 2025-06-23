@@ -1,0 +1,126 @@
+.center {
+  background: #2f408c;
+  padding: 20px 0px;
+  margin: 2px 0px;
+  line-height: 1.5;
+}
+.center .name {
+  color: whitesmoke;
+}
+.center .summa {
+  color: whitesmoke;
+}
+.skills {
+  text-align: center;
+  background: #2c5bd2;
+  text-decoration: underline;
+  padding: 5px 0px;
+  color: white;
+}
+.skill {
+  padding: 10px;
+
+  background: #f1f2f4;
+  color: rgb(6, 6, 6);
+  text-transform: capitalize;
+  font-size: 17px;
+  border-bottom: 2px solid black;
+}
+.strength {
+  text-align: center;
+  background: #2c5bd2;
+  text-decoration: underline;
+  padding: 5px 5px;
+  margin: 2px 0px;
+  color: white;
+}
+.strength1 {
+  padding: 10px;
+  background: #f1f2f4;
+  color: rgb(6, 6, 6);
+  text-transform: capitalize;
+  font-size: 17px;
+  border-bottom: 2px solid black;
+}
+.lan {
+  text-align: center;
+  background: #2c5bd2;
+  text-decoration: underline;
+  padding: 5px 5px;
+  margin: 2px 0px;
+  color: white;
+}
+.lan1 {
+  list-style: none;
+  padding: 10px;
+  background: #f1f2f4;
+  color: rgb(6, 6, 6);
+  text-transform: capitalize;
+  font-size: 17px;
+  border-bottom: 2px solid black;
+}
+.exp {
+  text-align: center;
+  background: #2c5bd2;
+  text-decoration: underline;
+  padding: 5px 5px;
+  margin: 2px 0px;
+  color: white;
+}
+.table1 {
+  list-style: none;
+  text-align: center;
+  margin-left: 350px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  background: #f1f2f4;
+  color: rgb(6, 6, 6);
+  text-transform: capitalize;
+  font-size: 17px;
+  border-bottom: 2px solid black;
+}
+.total{
+   margin-left: 100px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   border-bottom: 2px solid black;
+}
+.intern{
+text-align: center;
+  background: #2c5bd2;
+  text-decoration: underline;
+  padding: 5px 5px;
+  margin: 2px 0px;
+  color: white;
+}
+.bcm,.mac,.bleaf{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 2px solid black;
+}
+.bcm1,.mac1,.bleaf1{
+    list-style: none;
+    text-indent: 20px;
+}
+.pro{
+    text-align: center;
+  background: #2c5bd2;
+  text-decoration: underline;
+  padding: 5px 5px;
+  margin: 2px 0px;
+  color: white;
+}
+.traffic{
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+.last{
+    text-indent: 70px;
+    font-size: 17px;
+    padding: 0px 30px 20px 30px;
+    list-style: none;
+    text-align:justify;
+    border-bottom: 2px solid black;
+}

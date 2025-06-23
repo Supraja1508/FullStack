@@ -1,0 +1,3 @@
+In day 1 creating Resume using the HTML....
+
+This HTML file presents the resume of Myself a passionate and motivated Computer Science Engineering fresher. I highlighted my technical skills in C, Java, Flutter, web development, and UI/UX design, along with my strengths in communication and problem-solving. The resume also details my educational background and showcases hands-on internship experiences in web and mobile app development. A notable project on IoT-based smart traffic management is also featured. The content is neatly structured using HTML elements for easy readability.

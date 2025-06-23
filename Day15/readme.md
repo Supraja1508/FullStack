@@ -1,0 +1,1 @@
+In Day15 we learned about the intro of Server-Side Rendering, Cilent-Side Rendering, Single Page Application, Structured Query Language,Not- Only-SQL, and the history of APIs in an easy-to-understand way. It’s designed to help you quickly grasp these essential web and database concepts.

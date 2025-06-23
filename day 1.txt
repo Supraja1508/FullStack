@@ -1,0 +1,31 @@
+1-DESCRIPTION LIST:
+       Description list is also known as Definition List.It is a way to pair terms with other explanations like where you want to list items alongside their descriptions.
+     TAGS :
+           <dl> - Description List ("Wraps the whole list")
+           <dt> - Data Terms("Words you want to define")
+           <dd> - Data Definition("Meaning or explanation of the word")
+Example:
+    <dl>
+         <dt>HTML</dt>
+         <dd>Hyper Text Markup Language</dd>
+    </dl>
+
+2-ANOTHER SEMANTIC TAG FOR DELETE TAG:
+         <del> tad in HTML depends on what we are trying to express.The another semantic tag that might serve a similar.
+          TAGS:
+             <s>-When something is no longer useful but you don't want to show it as deleted(Strike on the content)
+             <mark>-use it to show new or content where something was changed or replaced
+             <ins>-Its often used with <del> to show what was added after something was removed.
+
+3-SEMANTIC TAG AND ITS PURPOSE:
+         The semantic tags help both browsers and people understand the meaning of content better.
+          TAGS:
+              <header>         <article>
+              <nav>            <form>
+              <footer>         <ul><ol><li>
+              <h1>             <del>
+              <p>              <b><strong>
+PURPOSE:
+       It easier for reader to understand the page and SEO help search engines like google understand what's on your page so your site can show up in search results more easily. It's make easy to manage and update your website 
+          
+          

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Weather App</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1501973801540-537f08ccae7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .weather-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      color: rgb(76, 46, 46);
+      width: 300px;
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background: white;
+      color: black;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.5s;
+    }
+
+    button:hover {
+      background: #895454;
+      color: white;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="weather-box">
+    <h2>🌦️ Weather condition</h2>
+    <input type="text" id="city" placeholder="Enter city name" />
+    <br>
+    <button onclick="getWeather()">Get Weather</button>
+    <h3 id="output"></h3>
+  </div>
+
+  <script>
+    async function getWeather() {
+      const city = document.getElementById('city').value.trim();
+      const apiKey = 'fd1be54e5c0ebed8e7d5fc0f9f47ffb5';
+
+      if (city === '') {
+        document.getElementById('output').innerText = 'Please enter a city name.';
+        return;
+      }
+
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (data.cod === 200) {
+          const temp = data.main.temp;
+          const condition = data.weather[0].description;
+          document.getElementById('output').innerText =
+            `🌡️ ${city}: ${temp}°C, ${condition}`;
+        } 
+        else {
+          document.getElementById('output').innerText = 'City not found!';
+        }
+      } 
+      catch (error) {
+        document.getElementById('output').innerText = 'Error fetching data.';
+      }
+    }
+  </script>
+</body>
+</html>
