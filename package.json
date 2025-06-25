@@ -1,0 +1,9 @@
+{
+  "name": "Day29",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

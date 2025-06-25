@@ -1,0 +1,133 @@
+1. Object.assign()
+       Used for copying properties from one or more source objects to a target object.
+const target = { a: 1 };
+const source = { b: 2 };
+const result = Object.assign(target, source);
+console.log(result);
+
+Output : { a: 1, b: 2 }
+
+Object.assign(target, source) means:
+     "Take everything from source and add it to target."It changes the target object directly.
+The result is not a new object, it's just the updated target.
+
+2. Object.freeze()
+        Prevents modification (add/remove/update) of properties in an object.
+
+const person = { name: "Supraja" };
+Object.freeze(person);
+person.name = "Chitra";
+person.age = 21;
+console.log(person); 
+
+Output : { name: "Supraja" }
+
+Object.freeze(person) freezes the object.           | person.name = "Chitra";                | person.age = 21;
+This means:                                         | This means:                            | Won't work age is not added to the object.
+You can’t change existing values.                   | Won't work. JS ignore this silently    |
+You can’t add new properties.                       | name stays "Supraja"                   |
+You can’t delete properties.                        |
+
+3. Object.seal()
+        Prevents adding or removing properties, but allows updating existing ones.
+const user = { name: "Supraja" };
+Object.seal(user);
+user.name = "Chitra";   
+user.age = 22;       
+delete user.name;     
+console.log(user); 
+
+Output : { name: "Chitra'}
+Think of Object.seal() like putting a plastic wrap over your object:
+You can open the container and edit what's inside (change values).
+But you can’t add anything new, or take anything out.
+
+4. Object.keys()
+     Returns an array of the object’s keys.
+const obj = { name: "Supraja", age: 21 };
+console.log(Object.keys(obj)); 
+
+Output : [ 'name', 'age' ]
+Object.keys(obj) is a built-in JavaScript method that returns an array of all own (not inherited) enumerable property names (keys) of the object.
+It gives you only the keys from your object, not the values.
+
+5. Object.values()
+        Returns an array of the object’s values.
+const obj = { name: "Supraja", age: 21 };
+console.log(Object.values(obj)); 
+
+Output : 
+[ 'Supraja', 21 ]
+Object.values(obj) returns an array of all the values inside the object.
+It does not give you the keys, only the values.
+
+6. Object.entries()
+        Returns an array of [key, value] pairs.
+const obj = { name: "Supraja", age: 21 };
+console.log(Object.entries(obj)); 
+
+Output : [ [ 'name', 'Supraja' ], [ 'age', 21 ] ]
+Object.entries(obj) returns an array of key-value pairs, where:
+Each element is a small array: [key, value]
+
+7. .hasOwnProperty()
+           Checks if a property exists directly on the object (not inherited).
+const obj = { name: "Supraja" };
+console.log(obj.hasOwnProperty('name')); 
+console.log(obj.hasOwnProperty('age'));  
+
+Output : true,false
+.hasOwnProperty(key)
+This method checks whether the key exists directly in the object, not in its prototype.
+
+const obj = {
+  name: "Supraja"
+};
+
+obj.hasOwnProperty('name')
+ Returns true
+Because name is a direct property of obj.Key exists in the object
+
+obj.hasOwnProperty('age')
+ Returns false
+Because age is not present in the object.Key does not exist
+
+
+
+==>Can a field of a  const JSON object be changed? Why? How?
+
+Yes, a field can be changed.
+
+Why?
+In JavaScript, const means you can't reassign the variable, but you can change the contents of objects or arrays it points to.
+
+const user = { name: "Suji" };
+user.name = "Nova"; 
+console.log(user);
+
+Output : { name: "Nova" }
+Explanation : You're not changing the variable user itself — you're just updating the data inside the object.
+
+ What is NOT allowed:
+const user = { name: "Suji" };
+user = { name: "Nova" }; 
+Output : Error: Assignment to constant variable
+ This is reassignment — and that’s not allowed with const.
+
+
+ What IS allowed:
+const user = { name: "Suji" };
+user.name = "Nova";  
+user.age = 21;        
+delete user.name;
+console.log(user);  
+
+Output : { age: 21 }
+ Explanation:
+       Even though the object user is declared with const, you’re allowed to:
+| Operation          | Allowed | Explanation                                   |
+| user.name = "Nova" |  Yes    | You can "change" properties inside the object |
+| user.age = 21      |  Yes    | You can "add" new properties                  |
+| delete user.name   |  Yes    | You can "remove" properties                   |
+
+
