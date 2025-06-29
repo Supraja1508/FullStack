@@ -55,7 +55,7 @@ db.sales.aggregate([
 ])
 
 
-## ✅ Part 3: MongoDB Users and Roles
+## Part 3: MongoDB Users and Roles
 
 // Switch to admin to create user
 use admin
