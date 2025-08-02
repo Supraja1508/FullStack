@@ -1,0 +1,1 @@
+import{R as s,j as e}from"./index-sz4TFsGQ.js";const o=s.memo(()=>e.jsxs("div",{className:"page",children:[e.jsx("h1",{children:"Home Page"}),e.jsx("p",{children:"This is the home page content."})]}));export{o as default};

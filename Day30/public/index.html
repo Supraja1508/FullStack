@@ -1,0 +1,35 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Error & RegEx App</title>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6 font-sans">
+  <div class="max-w-xl mx-auto bg-white p-6 rounded shadow">
+    <h1 class="text-2xl font-bold text-center text-indigo-600">Regex Validation</h1>
+    <form id="regexForm" class="space-y-4 mt-6">
+      <input type="email" name="email" placeholder="Enter email" class="w-full p-2 border rounded" required />
+      <input type="text" name="phone" placeholder="Enter 10-digit phone" class="w-full p-2 border rounded" required />
+      <input type="password" name="password" placeholder="Strong Password" class="w-full p-2 border rounded" required />
+      <input type="text" name="url" placeholder="Website URL" class="w-full p-2 border rounded" required />
+      <button type="submit" class="bg-indigo-500 text-white px-4 py-2 rounded">Validate</button>
+    </form>
+    <div id="result" class="mt-4 text-sm"></div>
+    <hr class="my-6">
+    <h2 class="text-xl font-semibold">Test Status Codes</h2>
+    <div class="grid grid-cols-2 gap-2 mt-4">
+      <button onclick="testStatus('/success')" class="bg-green-500 text-white px-2 py-1 rounded">200 Success</button>
+      <button onclick="testStatus('/unauthorized')" class="bg-yellow-500 text-white px-2 py-1 rounded">401 Unauthorized</button>
+      <button onclick="testStatus('/forbidden')" class="bg-red-500 text-white px-2 py-1 rounded">403 Forbidden</button>
+      <button onclick="testStatus('/bad-request')" class="bg-orange-500 text-white px-2 py-1 rounded">400 Bad Request</button>
+      <button onclick="testStatus('/server-error')" class="bg-purple-500 text-white px-2 py-1 rounded">500 Error</button>
+      <button onclick="testStatus('/not-found')" class="bg-gray-700 text-white px-2 py-1 rounded">404 Not Found</button>
+    </div>
+  </div>
+</body>
+</html>

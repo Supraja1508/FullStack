@@ -1,0 +1,6 @@
+Text output file
+   Just a plain file to store logs or exported data (no code needed).
+
+
+Post saved successfully.
+Fetched 10 users.

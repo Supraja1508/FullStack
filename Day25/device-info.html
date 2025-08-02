@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Device Info</title>
+  </head>
+<body>
+  <h2>Device Info</h2>
+  <div id="output"></div>
+
+  <script>
+    const os = navigator.platform;
+    const userAgent = navigator.userAgent;
+    const isMobile = /Mobi|Android/i.test(userAgent);
+
+    document.getElementById("output").innerHTML = `
+      <strong>OS:</strong> ${os}<br>
+      <strong>User Agent:</strong> ${userAgent}<br>
+      <strong>Is Mobile:</strong> ${isMobile ? 'Yes' : 'No'}
+    `;
+  </script>
+</body>
+
+</html>
+
+

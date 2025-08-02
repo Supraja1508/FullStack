@@ -1,0 +1,1 @@
+import{R as a,j as e}from"./index-sz4TFsGQ.js";const o=a.memo(()=>e.jsxs("div",{className:"page",children:[e.jsx("h1",{children:" About Page"}),e.jsx("p",{children:"This app demonstrates React performance optimizations like memoization, lazy loading, and routing."})]}));export{o as default};

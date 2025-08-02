@@ -1,0 +1,20 @@
+ Register
+ 
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+  "username": "suji",
+  "email": "suji@gmail.com",
+  "password": "123456"
+}
+
+ Login
+
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "suji@gmail.com",
+  "password": "123456"
+}

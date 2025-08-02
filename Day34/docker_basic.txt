@@ -1,0 +1,35 @@
+What is Docker?
+
+Docker is a platform to develop, ship, and run applications inside containers. It allows apps to be isolated from infrastructure.
+
+Docker Components:
+- Docker Engine: Core service that runs containers
+- Docker Images: Blueprints for containers
+- Docker Containers: Running instances of Docker images
+- Docker Hub: Public repo for images
+- Dockerfile: Script that defines the image
+- Docker Compose: Tool to run multi-container apps using YAML
+
+Pros:
+- Consistent environments (dev → prod)
+- Lightweight and fast
+- Easy to scale
+- Reduces setup time
+
+Cons:
+- Steep learning curve for beginners
+- GUI support is limited
+- Networking can get complex
+
+
+
+Dockerfile:
+- Used to build a Docker image
+- Contains commands like `FROM`, `RUN`, `COPY`, `CMD`
+
+Docker Compose:
+- Used to manage multi-container applications
+- Uses YAML file (docker-compose.yml)
+- Commands:
+  - `docker-compose up` (start containers)
+  - `docker-compose down` (stop & remove)

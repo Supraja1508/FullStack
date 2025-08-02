@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <link rel="stylesheet" href="file.css">
+</head>
+<body>
+    <div id="reference" class="ref">Reference</div>
+    <script>
+        const newDiv = document.createElement('div');
+        newDiv.textContent = "Inserted";
+        document.getElementById('reference').insertAdjacentElement('afterend', newDiv);
+    </script>
+    <br>
+
+    <div id="container">START</div>
+    <script>
+        const html = "<p><b>This is bold HTML text</b></p>";
+        document.getElementById('container').insertAdjacentHTML('beforeend', html);
+    </script>
+
+    <div id="textContainer">Hi</div>
+    <script>
+        document.getElementById('textContainer').insertAdjacentText('beforeend', " World!");
+    </script>
+
+    <div id="box" class="client">Set Box</div>
+    <script>
+        const box = document.getElementById('box');
+        console.log("clientWidth:", box.clientWidth);     
+        console.log("offsetWidth:", box.offsetWidth);
+        console.log("clientTop (border):", box.clientTop);
+    </script>
+
+    <div id="rectBox" style="margin-top: 50px;">Rectangle Box</div>
+    <script>
+        const rect = document.getElementById('rectBox').getBoundingClientRect();
+        console.log("Top:", rect.top, "Left:", rect.left, "Width:", rect.width, "Height:", rect.height);
+    </script>
+
+   
+    <div id="scrollBox">
+        <div style="height: 300px;">Scrolling inside</div>
+    </div>
+    <script>
+        const scroll = document.getElementById('scrollBox');
+        scroll.scrollTop = 30; 
+        console.log("Scroll Height:", scroll.scrollHeight);
+    </script>
+
+  
+    <div style="height: 400px;"></div>
+    <div id="target">Scroll to me</div>
+    <script>
+        document.getElementById('target').scrollIntoView({ behavior: "auto" });
+    </script>
+
+    <button onclick="window.scrollTo({ top: 400, behavior: 'smooth' })">Scroll here</button>
+    <div style="height: 1000px;"></div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+// 1. Switch to a new database
+use Task31DB
+
+// 2. Create a new collection
+db.students.insertOne({ name: "Suji", age: 22, course: "Full Stack" })
+
+// 3. Insert multiple documents
+db.students.insertMany([
+  { name: "Nova", age: 25, course: "UI/UX" },
+  { name: "Ravi", age: 23, course: "DevOps" },
+  { name: "Meera", age: 24, course: "AI/ML" }
+])
+
+// 4. Read: Find all documents
+db.students.find()
+
+// 5. Read: Find with condition
+db.students.find({ course: "DevOps" })
+
+// 6. Update: Modify one document
+db.students.updateOne(
+  { name: "Suji" },
+  { $set: { course: "MERN Stack", age: 23 } }
+)
+
+// 7. Update: Modify multiple documents
+db.students.updateMany(
+  { age: { $gt: 23 } },
+  { $set: { status: "Advanced Learner" } }
+)
+
+// 8. Delete: Remove one document
+db.students.deleteOne({ name: "Ravi" })
+
+// 9. Delete: Remove multiple documents
+db.students.deleteMany({ course: "AI/ML" })
+
+// 10. Final Check
+db.students.find()

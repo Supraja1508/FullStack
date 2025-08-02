@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        padding: 10px;
+/*         background: #b03232; */
+      }
+      .absolute {
+        background: #e0c4c4;
+        height: 600px;
+        width: 700px;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin-left: 350px;
+        position: relative;
+      }
+      .bottom-app-bar {
+        width: 680px;
+        background-color: #0f8c14;
+        position: absolute;
+        left: 0px;
+        bottom: 0;
+        padding: 10px 20px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        text-transform: capitalize;
+        position: absolute;
+        width: 500px;
+        margin-left: 100px;
+        margin-top: 100px;
+      }
+
+      .plus {
+        position: absolute;
+        margin-left: 650px;
+        bottom: 80px;
+        transform: translateX(-50%);
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        line-height: 56px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+
+      .icon {
+        font-size: 24px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="absolute">
+      <h1>hii im using first time absolute in my coding using positions</h1>
+      <div class="plus">+</div>
+
+      <div class="bottom-app-bar">
+        <div class="icon">&#9776;</div>
+      </div>
+    </div>
+  </body>
+</html>

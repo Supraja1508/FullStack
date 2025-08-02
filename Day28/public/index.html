@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 28 - HTTP & Express</title>
+</head>
+<body style="font-family: sans-serif; padding: 20px">
+  <h1>Node.js HTTP & Express Demo</h1>
+
+  <h2>Greet by Name (Param)</h2>
+  <input id="nameInput" placeholder="Enter your name" />
+  <button onclick="greet()">Greet</button>
+  <p id="greetOutput"></p>
+
+  <h2>Search (Query)</h2>
+  <input id="searchInput" placeholder="Enter keyword" />
+  <button onclick="search()">Search</button>
+  <p id="searchOutput"></p>
+
+  <h2>Read File (FS)</h2>
+  <button onclick="readFile()">Read File</button>
+  <p id="fileOutput"></p>
+
+  <script>
+    function greet() {
+      const name = document.getElementById('nameInput').value;
+      fetch(`https://day28.onrender.com/greet/${name}`)
+        .then(res => res.text())
+        .then(data => document.getElementById('greetOutput').innerText = data);
+    }
+
+    function search() {
+      const keyword = document.getElementById('searchInput').value;
+      fetch(`https://day28.onrender.com/search?keyword=${keyword}`)
+        .then(res => res.text())
+        .then(data => document.getElementById('searchOutput').innerText = data);
+    }
+
+    function readFile() {
+      fetch('https://day28.onrender.com/read-file')
+        .then(res => res.text())
+        .then(data => document.getElementById('fileOutput').innerText = data);
+    }
+  </script>
+</body>
+</html>

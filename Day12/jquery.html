@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Concepts Demo</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 300px;
+      height: 100px;
+      background-color: lightblue;
+      margin-top: 20px;
+      display: none;
+      padding: 10px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    #box:hover {
+      background-color: skyblue;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #0066cc;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>jQuery Concepts Demo</h1>
+
+  <p id="message">Click the buttons to interact with the box.</p>
+
+  <button id="showBtn">Show Box</button>
+  <button id="hideBtn">Hide Box</button>
+  <button id="toggleBtn">Toggle Box</button>
+  <button id="changeTextBtn">Change Text</button>
+  <button id="changeColorBtn">Change Color</button>
+
+  <div id="box">Hello! I'm a box controlled by jQuery.</div>
+
+  <script>
+    $(document).ready(function () {
+      let isBlue = true;
+
+      // Show the box
+      $("#showBtn").click(function () {
+        $("#box").fadeIn();
+      });
+
+      // Hide the box
+      $("#hideBtn").click(function () {
+        $("#box").fadeOut();
+      });
+
+      // Toggle the box
+      $("#toggleBtn").click(function () {
+        $("#box").toggle();
+      });
+
+      // Change text
+      $("#changeTextBtn").click(function () {
+        $("#box").text("You changed my content using jQuery!");
+      });
+
+      // Change color
+      $("#changeColorBtn").click(function () {
+        if (isBlue) {
+          $("#box").css("background-color", "lightgreen");
+        } else {
+          $("#box").css("background-color", "lightblue");
+        }
+        isBlue = !isBlue;
+      });
+    });
+  </script>
+</body>
+</html>

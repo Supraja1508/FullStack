@@ -1,0 +1,56 @@
+SSR(Server Side Rendering)
+ In website terms:
+When you open a web page, the server prepares everything (the full page) and sends it to your browser, already ready to display.
+
+For example :
+        Imagine you're hungry and order a pizza from your favorite restaurant.
+The restaurant bakes the pizza completely, packs it, and delivers it to your home.
+You just open the box and eat — quick and easy!
+Used in:
+   Next.js (React framework that supports SSR)
+   WordPress
+   News websites, blogs, and e-commerce homepages
+
+
+CSR(Client Side Rendering)   
+    In website terms:
+When you visit the site, the server sends a mostly empty page with just the instructions (JavaScript).
+Your browser (like your kitchen) builds the whole page using those instructions.
+
+For example:
+       Imagine you order a pizza, but instead of a hot, ready-made one, you get a DIY pizza kit — dough, sauce, cheese, toppings.
+Now you have to assemble and bake it at home before you can eat.
+Used in:
+     React
+     Vue
+     Angular
+     Most modern web apps and dashboards
+
+
+SPA (Single Page Application)
+     The website loads once when you open it.
+     After that, when you click on stuff (like buttons or links), only parts of the page change.
+     It feels super fast, and you don't see the whole screen flashing or reloading.
+
+For example:
+     In Gmail, when you open an email, the inbox stays there, and only the message area changes.
+It’s quick, smooth, and the page never fully reloads.
+
+SQL: 
+     SQL is Structured Query Language and it is best for the sturctured data
+     Storing customer records (name, age, orders).
+     Structure: Tables (rows & columns)	
+     Example DB: MySQL, PostgreSQL
+
+NoSQL: 
+     NoSQL is Not Only SQL and it is best for the unstructured data
+     Storing chat messages, social media posts.
+     Structure: Flexible (JSON, key-value, etc.)
+     Example DB: MongoDB, Firebase, CouchDB
+
+
+HISTORY OF API:
+     It lets your website change the URL in the browser
+     like going from /home to /profile
+     Without reloading the whole website
+

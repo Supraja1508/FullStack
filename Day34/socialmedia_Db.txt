@@ -1,0 +1,48 @@
+Popular Social Media Platforms and the Databases They Use:
+
+1.Facebook
+   - Database: MySQL, RocksDB, TAO (custom graph DB)
+   - Pros:
+     - MySQL: Relational, mature, ACID-compliant
+     - RocksDB: High performance for key-value storage
+     - TAO: Fast social graph reads/writes
+   - Cons:
+     - Managing large-scale data sharding with MySQL is complex
+     - RocksDB is low-level, needs careful tuning
+
+2.Twitter
+   - Database: MySQL, Redis, Manhattan (proprietary)
+   - Pros:
+     - MySQL: Reliable relational DB
+     - Redis: In-memory for real-time performance
+     - Manhattan: High availability and geo-distribution
+   - Cons:
+     - Redis data loss if not properly configured
+     - Proprietary tech like Manhattan isn’t open to public
+
+3.Instagram
+   - Database: PostgreSQL, Cassandra, Redis
+   - Pros:
+     - PostgreSQL: Robust relational DB
+     - Cassandra: Scalable NoSQL, good for large data
+     - Redis: Speed for caching
+   - Cons:
+     - Cassandra requires complex data modeling
+     - Relational DBs need careful scaling
+
+4.LinkedIn
+   - Database: Espresso, Voldemort, Kafka, MySQL
+   - Pros:
+     - Espresso: Scalable document store
+     - Voldemort: Highly available key-value store
+     - Kafka: Real-time event streaming
+   - Cons:
+     - Internal systems not open source (except Kafka)
+
+5.YouTube (Google)
+   - Database: Bigtable, Spanner
+   - Pros:
+     - Bigtable: High throughput and horizontal scaling
+     - Spanner: Global transactions with SQL support
+   - Cons:
+     - Not publicly available (except GCP versions)

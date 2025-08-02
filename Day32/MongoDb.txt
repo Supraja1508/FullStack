@@ -1,0 +1,84 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "int: " << sizeof(int) << " bytes\n";
+    cout << "float: " << sizeof(float) << " bytes\n";
+    cout << "double: " << sizeof(double) << " bytes\n";
+    cout << "char: " << sizeof(char) << " bytes\n";
+    cout << "bool: " << sizeof(bool) << " bytes\n";
+    cout << "long: " << sizeof(long) << " bytes\n";
+    cout << "short: " << sizeof(short) << " bytes\n";
+    return 0;
+}
+
+
+ Part 2: MongoDB Operators & Aggregation Queries
+
+
+use Task32DB
+
+// Sample Collection
+db.sales.insertMany([
+  { item: "pen", qty: 100, price: 10 },
+  { item: "pencil", qty: 200, price: 5 },
+  { item: "notebook", qty: 150, price: 20 },
+  { item: "eraser", qty: 75, price: 2 }
+])
+
+// Operators
+// Find where qty > 100
+db.sales.find({ qty: { $gt: 100 } })
+
+// Find where qty between 100 and 200
+db.sales.find({ qty: { $gte: 100, $lte: 200 } })
+
+// Aggregation: Total revenue per item
+db.sales.aggregate([
+  {
+    $project: {
+      item: 1,
+      totalRevenue: { $multiply: ["$qty", "$price"] }
+    }
+  }
+])
+
+// Aggregation: Group by item and sum revenue
+db.sales.aggregate([
+  {
+    $group: {
+      _id: "$item",
+      totalRevenue: { $sum: { $multiply: ["$qty", "$price"] } }
+    }
+  }
+])
+
+
+## Part 3: MongoDB Users and Roles
+
+// Switch to admin to create user
+use admin
+
+// Create a new user with readWrite role on Task32DB
+db.createUser({
+  user: "sujiUser",
+  pwd: "sujiPass123",
+  roles: [
+    {
+      role: "readWrite",
+      db: "Task32DB"
+    }
+  ]
+})
+
+// Verify user creation
+db.getUsers()
+
+// To create an admin user (optional)
+db.createUser({
+  user: "adminUser",
+  pwd: "adminPass123",
+  roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+})
+```
